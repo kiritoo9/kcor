@@ -20,7 +20,7 @@ Aplikasi sederhana berbasis Python 3.10 untuk melakukan:
 
 1. Clone repositori ini:
     ```bash
-    cd ocr-face-video
+    cd kcor
     ```
 
 2. Install ffmpeg:
