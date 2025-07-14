@@ -37,7 +37,7 @@ Aplikasi sederhana berbasis Python 3.10 untuk melakukan:
 
 3. Install virtualenv
     ```bash
-    virutalenv -p python3.11 venv
+    virutalenv -p python3.10 venv
     source venv/bin/activate
     ```
 
@@ -50,12 +50,12 @@ Aplikasi sederhana berbasis Python 3.10 untuk melakukan:
 
 1. Membaca teks dari gambar + menyimpan foto:
     ```bash
-    python app.py --media image
+    python app.py --media=image --source=./assets/file_name.jpg
     ```
 
 2. Deteksi teks dari video:
     ```bash
-    python app.py --media video
+    python app.py --media=video --source=./assets/file_name.mp4
     ```
 
 ## Version

@@ -14,24 +14,30 @@ if __name__ == "__main__":
         default="image",
         help="Media type you want to analyze"
     )
+    parser.add_argument(
+        "--source", "-s",
+        type=str,
+        help="File source"
+    )
+
     args = parser.parse_args()
     media = args.media
+    source = args.source
+    if source is None or source == "":
+        print("No file selected!")
+        exit()
 
     # start processing data
     start_time = time.time()
     print(f"Start to processing {media} data..")
 
     if media == "image":
-        img_source = "./assets/ktp-example2.jpg"
-
         # perform to run OCR and analyzing+capture photo
-        ocr = OCR(img_source)
+        ocr = OCR(source)
         print(json.dumps(ocr.data, indent=4))
     elif media == "video":
-        video_source = "./assets/interview.mp4"
-
         # perform to analyze video
-        result = VideoAnalyzer(video_source)
+        result = VideoAnalyzer(source)
     else:
         print("no media recognized! skipping process..")
 
